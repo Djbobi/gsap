@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitesmoke;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.cursor {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: fixed;
+  background: linear-gradient(rgb(221, 255, 0), rgb(252, 1, 1));
+  z-index: 7;
+  mix-blend-mode: difference;
+  transition: left linear 0.1s top linear 0.1s;
+}
+
+.main {
+  background-color: black;
+}
+
+.Page1 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+}
+#nav {
+  height: 60px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2em;
+  padding: 0 30px;
+}
+
+#nav img {
+  height: 35px;
+}
+
+#nav-part1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+#nav .circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+}
+
+#nav h4 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+#nav h4:nth-child(1) {
+  color: yellow;
+  border-bottom: solid white 1.5px;
+}
+
+.Page1 h1 {
+  font-size: 7vw;
+  font-weight: 300;
+  margin-top: 8vw;
+  margin-left: 6vw;
+}
+.Page1 h2 {
+  font-size: 6vw;
+  font-weight: 300;
+  margin-left: 26vw;
+}
+
+.Page1 video {
+  width: 60%;
+  margin-top: 10vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.Page2 {
+  min-height: 130vh;
+  width: 100%;
+  padding: 100px 5vw;
+  position: relative;
+  z-index: 9;
+  border-bottom: 2px solid black;
+}
+.Page2-container {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Page2 h1 {
+  font-size: 8vw;
+  font-weight: 300;
+  color: black;
+}
+
+.page2-left {
+  width: 39%;
+}
+.page2-right {
+  width: 30%;
+}
+.page2-left h2 {
+  font-size: 3vw;
+  font-weight: 300;
+  color: black;
+}
+.page2-right p {
+  font-size: 2.2em;
+  color: black;
+}
+.page2-right button {
+  width: 25%;
+  height: 40px;
+  font-size: 1.2em;
+  border-radius: 6px;
+  border: 2px solid black;
+  background: none;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 3px;
+}
+.page2-right button:hover {
+  width: 25%;
+  border-radius: 6px;
+  height: 40px;
+  font-size: 1.2em;
+  border: 2px solid black;
+  background: none;
+  color: whitesmoke;
+  background-color: black;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+}
+.Page3 {
+  min-height: 120vh;
+  width: 100%;
+  color:whitesmoke;
+}
+
+.Page3 h1 {
+  font-size: 6vw;
+  /* color: black; */
+  font-weight: 300;
+  position: relative;
+  padding-top: 30px;
+  margin-left: 100px;
+}
+
+.Page3 .page3-part1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.page3-part1 img {
+  margin-top: 160px;
+}
+
+.Page4 {
+  min-height: 150vh;
+  width: 100%;
+  /* background-color: red; */
+}
+.Page4 .elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 100px;
+  position: relative;
+}
+
+.elem:hover h1 {
+  /* background-color: black; */
+  transform: translateY(-100%);
+  color: whitesmoke;
+}
+
+.elem:hover img {
+  opacity: 1;
+  transform: translateY(0%) rotate(0deg);
+}
+
+.text-div {
+  /* background-color: lightblue; */
+  height: 140px;
+  overflow: hidden;
+  margin-top: -180px;
+  color: blue;
+}
+.elem img {
+  width: 50%;
+  opacity: 0;
+  position: absolute;
+  transform: translateY(10%) rotate(2deg);
+  transition: all ease-out 0.5s;
+}
+
+.elem img:nth-child(1) {
+  left: 194px;
+  width: 29%;
+}
+.elem img:nth-child(3) {
+  right: 193px;
+  width: 29%;
+}
+
+.elem h1 {
+  font-size: 7vw;
+  transition: all ease-out 0.5s;
+  color: blue;
+}
+
+.Page5 {
+  min-height: 150vh;
+  width: 100%;
+  /* background-color: red; */
+}
+footer{
+    height: 90vh;
+    
+}
+/* Global styles remain the same */
+
+/* Styles for screens with a maximum width of 768px (typical for phones) */
+@media (max-width: 768px) {
+  .cursor {
+    /* Adjust cursor styles for smaller screens */
+    height: 15px;
+    width: 15px;
+  }
+
+  .Page1 h1 {
+    /* Adjust font size and margins for smaller screens */
+    font-size: 5vw;
+    margin-top: 6vw;
+    margin-left: 4vw;
+  }
+
+  .Page1 h2 {
+    /* Adjust font size and margins for smaller screens */
+    font-size: 4vw;
+    margin-left: 10vw;
+  }
+
+  .Page1 video {
+    /* Make the video responsive by adjusting width and margins */
+    width: 90%;
+    margin-top: 5vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Similar adjustments can be made for other sections/pages as needed */
+}
+
+/* Additional media queries can be added for different screen sizes */
